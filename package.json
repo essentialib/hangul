@@ -1,7 +1,7 @@
 {
-    "name": "ts-module-template",
-    "version": "1.0.0",
-    "description": "template for typescript module",
+    "name": "hangul",
+    "version": "0.1.0-beta",
+    "description": "hangul helper module",
     "main": "src/index.ts",
     "directories": {
         "example": "./examples",
