@@ -3,17 +3,13 @@ declare global {
     declare const importPackage: (...pkgs: (android | androidx | java | javax)[]) => any;
     // @ts-ignore
     declare const importClass: (...pkgs: (android | androidx | java | javax)[]) => any;
-}
 
-declare global {
     namespace App {
         export function getContext(): android.content.Context;
 
         export function runOnUiThread(task: Function, onComplete: (error, result) => void): void;
     }
-}
 
-declare global {
     declare class Bot {
         setCommandPrefix(prefix: string): void;
 
@@ -47,9 +43,7 @@ declare global {
 
         markAsRead(room?: string, packageName?: string): boolean;
     }
-}
 
-declare global {
     namespace BotManager {
         export function getCurrentBot(): Bot;
 
@@ -76,9 +70,7 @@ declare global {
         export function unload(): void;
 
     }
-}
 
-declare global {
     namespace Broadcast {
         export function send(broadcastName: string, value: any): void;
 
@@ -88,9 +80,7 @@ declare global {
 
         export function unregisterAll(): void;
     }
-}
 
-declare global {
     namespace Database {
         export function exists(fileName: string): boolean;
 
@@ -102,9 +92,7 @@ declare global {
 
         export function writeString(fileName: string, str: string): void;
     }
-}
 
-declare global {
     namespace Device {
         export function getBuild(): android.os.Build;
 
@@ -141,9 +129,7 @@ declare global {
 
         export function acquireWakeLock(param1: number, param2: string): void;
     }
-}
 
-declare global {
     namespace Event {
         export namespace Activity {
             export const BACK_PRESSED = "activityBackPressed";
@@ -163,9 +149,7 @@ declare global {
         export const MESSAGE = "message";
         export const COMMAND = "command";
     }
-}
 
-declare global {
     namespace FileStream {
         export function read(path: string): string;
 
@@ -175,9 +159,7 @@ declare global {
 
         export function remove(path: string): boolean;
     }
-}
 
-declare global {
     namespace GlobalLog {
         export function d(data: string, showToast: boolean = false): void;
 
@@ -193,9 +175,7 @@ declare global {
 
         export function clear(): void;
     }
-}
 
-declare global {
     namespace Http {
         export function request(url: string, callback: (error: java.lang.Exception, response: org.jsoup.Connection.Response, doc: org.jsoup.nodes.Document) => void): void;
 
@@ -218,9 +198,7 @@ declare global {
             headers?: Record<string, string>,
         }): org.jsoup.nodes.Document;
     }
-}
 
-declare global {
     namespace Log {
         export function d(data: string, showToast: boolean = false): void;
 
@@ -236,9 +214,7 @@ declare global {
 
         export function clear(): void;
     }
-}
 
-declare global {
     namespace Security {
         /**
          * 특정 값을 AES 복호화한 값을 반환합니다.
@@ -495,9 +471,7 @@ declare global {
          */
         export function sha3_512(value: string): string;
     }
-}
 
-declare global {
     declare class SessionManager {
         bindSession(packageName: string, room: string, action?: android.app.Notification.Action): boolean;
 
